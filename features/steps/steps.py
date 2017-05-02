@@ -9,11 +9,14 @@ def step_impl(context):
 
 @when('we call add with "{x}" and "{y}"')
 def step_impl(context, x, y):
-    context.rv = context.math_complicated.add(1, 5)
+    x = int(x)
+    y = int(y)
+    context.rv = context.math_complicated.add(x, y)
 
 
 @then('it will return "{rv}"')
 def step_impl(context, rv):
+    rv = int(rv)
     assert context.rv == rv
 
 
