@@ -10,3 +10,12 @@
 3
 
 ```
+
+## Odčítání
+
+```python
+>>> import math_complicated
+>>> math_complicated.sub(10, 5)
+5
+
+```
